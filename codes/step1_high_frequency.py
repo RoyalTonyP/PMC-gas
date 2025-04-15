@@ -13,8 +13,8 @@ llm = ChatOpenAI(
 )
 
 # 定义文件夹路径和输出文件路径
-folder_path = r"D:/PyCharm/Py_Projects/gaspaper/datasets"
-output_file = r"D:/PyCharm/Py_Projects/gaspaper/results/mian_variable_result.xlsx"
+folder_path = r"D:/PMC-gas/datasets"
+output_file = r"D:/PMC-gas/results/mian_variable_result.xlsx"
 
 # 用于存储所有文档的文本
 all_texts = []
