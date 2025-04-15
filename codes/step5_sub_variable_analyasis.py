@@ -1,7 +1,7 @@
 import xlrd
 from openpyxl import Workbook
 
-wb = xlrd.open_workbook("D:/PyCharm/Py_Projects/gaspaper/results/sub_variables_scores_results.xls")
+wb = xlrd.open_workbook("D:/PMC-gas/results/sub_variables_scores_results.xls")
 sheet = wb.sheet_by_index(0)
 rows = sheet.nrows
 sub_scores = {}
@@ -148,4 +148,4 @@ for i in sub_scores[list(sub_scores.keys())[0]].keys():
         ws.cell(row=row2, column=2, value=j)
         row2 += 1
 
-wb.save("D:/PyCharm/Py_Projects/gaspaper/results/sub_variable_scores_standard.xlsx")
+wb.save("D:/PMC-gas/results/sub_variable_scores_standard.xlsx")
