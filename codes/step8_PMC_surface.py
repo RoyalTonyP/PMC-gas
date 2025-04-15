@@ -1,6 +1,6 @@
 import openpyxl
 
-workbook = openpyxl.load_workbook("D:/PyCharm/Py_Projects/gaspaper/results/main_variable_scores_&_PMC_index.xlsx",
+workbook = openpyxl.load_workbook("D:/PMC-gas/results/main_variable_scores_&_PMC_index.xlsx",
                                   data_only=True)
 sheet = workbook.active
 
@@ -31,4 +31,4 @@ for i in dict_main_variables.keys():
         for k in range(len(list_matrix2[j])):
             ws.cell(row=j + 2, column=k + 2, value=list_matrix2[j][k])
     name = os.path.basename(i).replace('.docx', '')
-    wb.save("D:/PyCharm/Py_Projects/gaspaper/results/PMC Surface/{}.xlsx".format(name))
+    wb.save("D:/PMC-gas/results/PMC Surface/{}.xlsx".format(name))
