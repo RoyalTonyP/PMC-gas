@@ -132,7 +132,7 @@ def validate_categories(all_categories):
 # 主程序
 def main():
     llm = initialize_llm()
-    categories = preprocess_data("D:/PyCharm/Py_Projects/gaspaper/results/extraction_results.xls")
+    categories = preprocess_data("D:/PMC-gas/results/extraction_results.xls")
 
     book = xlwt.Workbook(encoding='utf-8')
     sheet = book.add_sheet('分类结果', cell_overwrite_ok=True)
@@ -161,7 +161,7 @@ def main():
         sheet.write(row, 1, sub_attrs if sub_attrs else '聚类失败')
         row += 1
 
-    book.save("D:/PyCharm/Py_Projects/gaspaper/results/classification_results.xls")
+    book.save("D:/PMC-gas/results/classification_results.xls")
 
 
 if __name__ == "__main__":
