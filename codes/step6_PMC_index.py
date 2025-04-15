@@ -2,7 +2,7 @@ import xlrd
 from openpyxl import Workbook
 
 # 打开 Excel 文件
-wb = xlrd.open_workbook("D:/PyCharm/Py_Projects/gaspaper/results/sub_variables_scores_results.xls")
+wb = xlrd.open_workbook("D:/PMC-gas/results/sub_variables_scores_results.xls")
 sheet = wb.sheet_by_index(0)
 rows = sheet.nrows
 sub_scores = {}
@@ -72,4 +72,4 @@ for file_path in sub_scores.keys():
     column += 1
 
 # 保存新的 Excel 文件
-wb.save("D:/PyCharm/Py_Projects/gaspaper/results/main_variable_scores_&_PMC_index.xlsx")
+wb.save("D:/PMC-gas/results/main_variable_scores_&_PMC_index.xlsx")
