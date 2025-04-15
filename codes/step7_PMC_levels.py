@@ -1,7 +1,7 @@
 import openpyxl
 
 # 加载工作簿
-workbook = openpyxl.load_workbook("D:/PyCharm/Py_Projects/gaspaper/results/main_variable_scores_&_PMC_index.xlsx")
+workbook = openpyxl.load_workbook("D:/PMC-gas/results/main_variable_scores_&_PMC_index.xlsx")
 sheet = workbook.active
 
 # 初始化总和
@@ -52,4 +52,4 @@ ws.cell(row=3, column=4, value=len([PMC for PMC in PMC_index if 2 / 3 * sum <= P
 ws.cell(row=3, column=5, value=len([PMC for PMC in PMC_index if 8 / 9 * sum <= PMC <= sum]))
 
 # 保存工作簿
-wb.save("D:/PyCharm/Py_Projects/gaspaper/results/Evaluation_criteria_of_the_PMC.xlsx")
+wb.save("D:/PMC-gas/results/Evaluation_criteria_of_the_PMC.xlsx")
