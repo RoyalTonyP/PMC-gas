@@ -32,11 +32,11 @@ prompt = PromptTemplate(
 # 使用 RunnableSequence 替代 LLMChain
 runnable = prompt | llm
 
-wb = xlrd.open_workbook("D:/PyCharm/Py_Projects/gaspaper/results/extraction_results.xls")
+wb = xlrd.open_workbook("D:/PMC-gas/results/extraction_results.xls")
 sheet = wb.sheet_by_index(0)
 rows = sheet.nrows
 
-base_dir = "D:/PyCharm/Py_Projects/gaspaper/datasets"
+base_dir = "D:/PMC-gas/datasets"
 # 获取当前目录下的所有文件
 files = [os.path.join(base_dir, file) for file in os.listdir(base_dir)]
 gas_exploration_list = []
@@ -413,4 +413,4 @@ for file in tqdm(files):
         sheet2.write(row_w, 9, str(result9))
 
     row_w += 1
-book.save("D:/PyCharm/Py_Projects/gaspaper/results/sub_variables_scores_results.xls")
+book.save("D:/PMC-gas/results/sub_variables_scores_results.xls")
