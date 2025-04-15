@@ -30,7 +30,7 @@ prompt = PromptTemplate(
 runnable = prompt | llm
 
 # 数据集所在的基础目录
-base_dir = "D:/PyCharm/Py_Projects/gaspaper/datasets/"
+base_dir = "D:/PMC-gas/datasets/"
 # 获取基础目录下的所有文件
 files = [os.path.join(base_dir, file) for file in os.listdir(base_dir)]
 
@@ -292,4 +292,4 @@ for file in files:
     row += 1
 
 # 保存 Excel 文件
-book.save("D:/PyCharm/Py_Projects/gaspaper/results/extraction_results.xls")
+book.save("D:/PMC-gas/results/extraction_results.xls")
